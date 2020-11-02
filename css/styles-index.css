@@ -61,6 +61,10 @@ p {
 .contacts-nav {
   margin-left: auto;
 }
+.contacts-nav .item {
+  display: inline-flex;
+  align-items: center;
+}
 .site-nav .item:not(:last-child),
 .contacts-nav .item:not(:last-child) {
   margin-right: 50px;
@@ -94,6 +98,26 @@ p {
 }
 .contacts-nav .link:hover {
   color: var(--blue);
+}
+.contacts-nav > .icon-email::before {
+  content: "";
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  background-image: url("../images/studio/envelope.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.contacts-nav > .icon-smartphone::before {
+  content: "";
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  background-image: url("../images/studio/smartphone.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .main-title {
   background-color: var(--bg-color-black);
