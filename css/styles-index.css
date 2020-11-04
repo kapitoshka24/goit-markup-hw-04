@@ -330,6 +330,7 @@ footer {
   border: 1px solid var(--customers);
   box-sizing: border-box;
   border-radius: 4px;
+  cursor: pointer;
 }
 .customers .item:not(:last-child) {
   margin-right: 30px;
