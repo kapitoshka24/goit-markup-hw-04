@@ -35,7 +35,8 @@
   outline: none;
   cursor: pointer;
 }
-.services .btn:hover {
+.services .btn:hover,
+.services .btn:focus {
   color: var(--white);
   background-color: var(--blue);
 }

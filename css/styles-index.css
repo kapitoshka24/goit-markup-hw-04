@@ -66,7 +66,7 @@ p {
   margin-left: auto;
 }
 .site-nav .item:not(:last-child),
-.contacts-nav .item:not(:last-child) {
+.contact-item:not(:last-child) {
   margin-right: 50px;
 }
 .site-nav .link {
@@ -78,18 +78,19 @@ p {
   text-decoration: none;
 }
 .site-nav .link:hover,
+.site-nav .link:focus,
 .site-nav .link.active {
   color: var(--blue);
 }
 .site-nav .link,
-.contacts-nav .link {
+.contact-link {
   font-family: Roboto;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.contacts-nav .link {
+.contact-link {
   display: inline-flex;
   align-items: center;
   padding-top: 32px;
@@ -98,7 +99,8 @@ p {
   color: var(--grey);
   text-decoration: none;
 }
-.contacts-nav .item:hover .link {
+.contact-link:hover,
+.contact-link:focus {
   color: var(--blue);
 }
 .contacts-nav .email,
@@ -106,8 +108,10 @@ p {
   margin-right: 10px;
   fill: var(--grey);
 }
-.contacts-nav .item:hover .link:hover .email,
-.contacts-nav .item:hover .link:hover .phone {
+.contact-link:hover .email,
+.contact-link:hover .phone,
+.contact-link:focus .email,
+.contact-link:focus .phone {
   fill: var(--blue);
 }
 .main-title {
