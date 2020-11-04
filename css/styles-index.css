@@ -337,7 +337,7 @@ footer {
 .customers .link {
   fill: var(--customers);
 }
-.customers .link:hover {
+.customers .item:hover .link {
   fill: var(--blue);
 }
 .customers .item:hover {
