@@ -98,7 +98,7 @@ p {
   color: var(--grey);
   text-decoration: none;
 }
-.contacts-nav .link:hover {
+.contacts-nav .item:hover .link {
   color: var(--blue);
 }
 .contacts-nav .email,
@@ -106,8 +106,8 @@ p {
   margin-right: 10px;
   fill: var(--grey);
 }
-.contacts-nav .email:hover,
-.contacts-nav .phone:hover {
+.contacts-nav .item:hover .link:hover .email,
+.contacts-nav .item:hover .link:hover .phone {
   fill: var(--blue);
 }
 .main-title {
