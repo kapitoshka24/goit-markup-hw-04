@@ -24,6 +24,9 @@
   margin: 0;
   list-style-type: none;
 }
+.link {
+  text-decoration: none;
+}
 h1,
 h2,
 h3,
@@ -75,7 +78,6 @@ p {
   padding-bottom: 32px;
 
   color: var(--black);
-  text-decoration: none;
 }
 .site-nav .link:hover,
 .site-nav .link:focus,
@@ -257,22 +259,25 @@ p {
   font-weight: 500;
   color: var(--black);
 }
-.social-link {
-  display: block;
-  display: inline-flex;
+.social-media > .item {
+  border-radius: 50%;
+  margin-bottom: 30px;
+  box-shadow: none;
+}
+.social-media > .item > .link {
+  display: flex;
   align-items: center;
   justify-content: center;
   fill: var(--social-media-icon);
   width: 44px;
   height: 44px;
-  margin-bottom: 30px;
   border-radius: 50%;
 }
-.social-media .social-item:not(:last-child) {
+.social-media > .item:not(:last-child) {
   margin-right: 10px;
 }
-.social-link:hover,
-.social-link:focus {
+.social-media .link:hover,
+.social-media .link:focus {
   background-color: var(--blue);
   fill: var(--white);
   cursor: pointer;
@@ -324,29 +329,26 @@ footer {
   display: inline-flex;
   justify-content: center;
 }
-.customers .item {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 170px;
-  height: 90px;
-
-  border: 1px solid var(--customers);
-  box-sizing: border-box;
-  border-radius: 4px;
-  cursor: pointer;
+.customers {
+  display: flex;
 }
 .customers .item:not(:last-child) {
   margin-right: 30px;
 }
-.customers .link {
+.customers .item > .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
   fill: var(--customers);
+  border: 1px solid var(--customers);
+  border-radius: 4px;
 }
-.customers .item:hover .link {
+.customers .item:hover > .link,
+.customers .link:focus {
   fill: var(--blue);
-}
-.customers .item:hover {
-  border: 1px solid var(--blue);
+  border-color: var(--blue);
 }
 .footer {
   display: flex;
@@ -389,7 +391,9 @@ footer {
   display: inline-flex;
   margin-left: 70px;
 }
-.join-us .item {
+.join-us .link {
+  display: flex;
+  fill: var(--white);
   background-color: var(--sm-icon);
   display: inline-flex;
   align-items: center;
@@ -399,14 +403,11 @@ footer {
   margin-bottom: 30px;
   border-radius: 50%;
 }
-.join-us .link {
-  fill: var(--white);
-}
 .join-us .item:not(:last-child) {
   margin-right: 10px;
 }
-.join-us .item:hover,
-.join-us .item:focus {
+.join-us .link:hover,
+.join-us .link:focus {
   background-color: var(--blue);
   cursor: pointer;
 }
